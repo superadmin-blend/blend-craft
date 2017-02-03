@@ -1,1 +1,4 @@
 craft/config/db.php
+craft/storage/backups/
+craft/storage/runtime/
+craft/storage/userphotos/

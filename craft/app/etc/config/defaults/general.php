@@ -390,7 +390,7 @@ return array(
 	 * e.g. http://domain.com/index.php/path
 	 *
 	 * This can only be possible if your server is configured to redirect would-be 404's to index.php, for example, with
-	 * the redirect found in the 'htaccess' file that came with Craft:
+	 * the redirect found in the '.htaccess' file that came with Craft:
 	 *
 	 *     RewriteEngine On
 	 *
