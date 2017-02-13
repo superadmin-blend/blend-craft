@@ -7,7 +7,8 @@
     {% if subscribers|length %}
         {% for subscriber in subscribers %}
             <ul>
-                <li>{{ subscriber.name }} {{ subscriber.email }}</li>
+
+                <li>{{ subscriber.name }} {{ subscriber.email }} <a href="{{ actionUrl('formHandler/subscriber/deleteSubscriber', { id: subscriber.id }) }}"> delete</a></li>
             </ul>
         {% endfor %}
     {% endif %}

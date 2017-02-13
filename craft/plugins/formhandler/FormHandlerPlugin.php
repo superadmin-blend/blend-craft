@@ -32,8 +32,7 @@ class FormHandlerPlugin extends BasePlugin
     public function registerCpRoutes()
     {
         return array(
-            'formhandler\/subscriber\/new' => 'formhandler/subscriber/_edit',
-            'formhandler\/subscriber\/(?P<subscriberId>\d+)' => 'formhandler/subscriber/_edit',
+            'formHandler/subscriber/delete/(?P<subscriberId>\d)' => array('action' => 'FormHandler_SubscriberController/deleteSubscriber')
         );
     }
 

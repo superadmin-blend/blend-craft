@@ -34,15 +34,16 @@ class FormHandler_SubscriberService extends BaseApplicationComponent
 
     public function deleteSubscriberById($id)
     {
-
+        craft()->db->createCommand()->delete('formhandler_subscriber', 'id=:id', array(':id'=>$id));
     }
 
     public function getAllSubscribers()
     {
         $records = craft()->db->createCommand()
-                                    ->select('*')
-                                    ->from('formhandler_subscriber')
-                                    ->queryAll();
+            ->select('*')
+            ->from('formhandler_subscriber')
+            ->queryAll();
+        
         return FormHandler_SubscriberModel::populateModels($records);
     }
 
@@ -53,6 +54,7 @@ class FormHandler_SubscriberService extends BaseApplicationComponent
             ->from('formhandler_subscriber')
             ->order('dateCreated desc')
             ->queryAll();
+        
         return FormHandler_SubscriberModel::populateModels($records);
     }
 
@@ -65,6 +67,7 @@ class FormHandler_SubscriberService extends BaseApplicationComponent
     public function getSubscriberById($id)
     {
         if ($record = $this->subscriberRecord->findByPk($id)) {
+            
             return FormHandler_SubscriberModel::populateModel($record);
         }
     }

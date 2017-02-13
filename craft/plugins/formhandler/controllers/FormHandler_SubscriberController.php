@@ -9,6 +9,7 @@ class FormHandler_SubscriberController extends BaseController
     public function actionSaveSubscriber()
     {
         $this->requirePostRequest();
+        $this->requireAdmin();
 
         $subscriber = new FormHandler_SubscriberModel();
         $subscriber->name = craft()->request->getPost('name');
@@ -18,17 +19,18 @@ class FormHandler_SubscriberController extends BaseController
             craft()->formHandler_subscriber->saveSubscriber($subscriber);
         }
         else {
+            $errors = $subscriber->getErrors();
+            craft()->urlManager->setRouteVariables(array(
+                'errors' => $errors
+            ));
         }
 
     }
-
-
-
-
-    public function actionDeleteSubscriber()
+    
+    public function actionDeleteSubscriber($id)
     {
-
+        $this->requireAdmin();
+        craft()->formHandler_subscriber->deleteSubscriberById($id);
+        $this->redirect(craft()->request->getUrlReferrer());
     }
-
-
 }

@@ -11,6 +11,7 @@ class FormHandler_SubscriberModel extends BaseModel
     public function defineAttributes()
     {
         return [
+            'id'    => AttributeType::Number,
             'name' => [
                 'type'      => AttributeType::Name,
                 'required'  => true,
