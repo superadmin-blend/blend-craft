@@ -30,4 +30,18 @@
 			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
 		{% endfor %}
 	</ul>
+
+    <form method="post" action="" accept-charset="UTF-8">
+        {{ getCsrfInput() }}
+        <input type="hidden" name="action" value="formHandler/subscriber/saveSubscriber">
+        <input type="hidden" name="redirect" value="formHandler/subscriber/">
+        <input type="text" name = "name" placeholder="name">
+        <input type="email" name ="email" placeholder="email">
+
+        <!-- ...-->
+
+        <input class="btn submit" type="submit" value="{{ 'Submit'|t }}">
+    </form>
 {% endblock %}
+
+

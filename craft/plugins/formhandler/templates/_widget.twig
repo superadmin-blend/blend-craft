@@ -1,0 +1,8 @@
+{% set subscribers = craft.formhandler.getAllSubscribers() %}
+{% if subscribers|length %}
+    {% for subscriber in subscribers %}
+        <ul>
+            <li>{{ subscriber.name }} {{ subscriber.email }}</li>
+        </ul>
+    {% endfor %}
+{% endif %}
