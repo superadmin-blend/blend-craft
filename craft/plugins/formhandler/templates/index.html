@@ -1,0 +1,14 @@
+{% extends "_layouts/cp" %}
+{% set subscribers = craft.formhandler.getAllSubscribers() %}
+{% set title = "Form Handler"|t %}
+
+{% set content %}
+    <p>Hello!</p>
+    {% if subscribers|length %}
+        {% for subscriber in subscribers %}
+            <ul>
+                <li>{{ subscriber.name }} {{ subscriber.email }} <a href="{{ actionUrl('formHandler/subscriber/deleteSubscriber', { id: subscriber.id }) }}"> delete</a></li>
+            </ul>
+        {% endfor %}
+    {% endif %}
+{% endset %}
