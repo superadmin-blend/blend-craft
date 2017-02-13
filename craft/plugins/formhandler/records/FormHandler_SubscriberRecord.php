@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Piotr
- * Date: 3/02/2017
- * Time: 15:00
- */
+
 namespace Craft;
 
 class FormHandler_SubscriberRecord extends BaseRecord

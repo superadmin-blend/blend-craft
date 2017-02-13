@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Piotr
- * Date: 9/02/2017
- * Time: 13:39
- */
+
 namespace Craft;
 
 class FormHandlerVariable

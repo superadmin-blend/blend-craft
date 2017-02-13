@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Piotr
- * Date: 3/02/2017
- * Time: 16:19
- */
 
 namespace Craft;
 

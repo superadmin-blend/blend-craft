@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Piotr
- * Date: 3/02/2017
- * Time: 14:14
- */
+
 namespace Craft;
 
 class FormHandlerPlugin extends BasePlugin

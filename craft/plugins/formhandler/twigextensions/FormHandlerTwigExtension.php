@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Piotr
- * Date: 9/02/2017
- * Time: 9:19
- */
 
 namespace Craft;
 use Twig_Extension;
