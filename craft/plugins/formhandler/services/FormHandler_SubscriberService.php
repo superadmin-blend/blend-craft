@@ -12,7 +12,6 @@ class FormHandler_SubscriberService extends BaseApplicationComponent
         if (is_null($this->$subscriberRecord)) {
             $this->subscriberRecord = FormHandler_SubscriberRecord::model();
         }
-
     }
 
     public function newSubscriber($attributes = array())

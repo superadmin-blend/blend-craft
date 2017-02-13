@@ -12,7 +12,6 @@ class FormHandlerVariable
 
     public function getAllSubscribers()
     {
-        
         return craft()->formHandler_subscriber->getAllSubscribers();
     }
 
@@ -24,7 +23,6 @@ class FormHandlerVariable
      */
     public function getSubscriberById($id)
     {
-        
         return craft()->formHandler_subscriber->getSubsciberById($id);
     }
 }
