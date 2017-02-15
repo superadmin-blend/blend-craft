@@ -13,13 +13,13 @@ return array(
 	'server' => '127.0.0.1',
 
 	// The name of the database to select.
-	'database' => 'blend-craft',
+	'database' => 'blend_craft',
 
 	// The database username to connect with.
 	'user' => 'root',
 
 	// The database password to connect with.
-	'password' => 'pimatron3107',
+	'password' => 'root',
 
 	// The prefix to use when naming tables. This can be no more than 5 characters.
 	'tablePrefix' => 'craft',
