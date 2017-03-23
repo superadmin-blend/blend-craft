@@ -15,7 +15,7 @@
 	<meta charset="utf-8" />
 	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 	<link rel="home" href="{{ siteUrl }}" />
-
+	{% set baseUrl = craft.config.environmentVariables.baseUrl %}
 	<style type="text/css">
 		body { margin: 50px; font-family: sans-serif; background: #fff; }
 		#container { margin: 0 auto; width: 700px;
@@ -70,4 +70,31 @@
 		</footer>
 	</div>
 </body>
+<script>
+	// OUTDATED BROWSER
+
+	//event listener: DOM ready
+	function addLoadEvent(func) {
+	    var oldonload = window.onload;
+	    if (typeof window.onload != 'function') {
+	        window.onload = func;
+	    } else {
+	        window.onload = function() {
+	            if (oldonload) {
+	                oldonload();
+	            }
+	            func();
+	        }
+	    }
+	}
+	//call plugin function after DOM ready
+	addLoadEvent(function(){
+	    outdatedBrowser({
+	        bgColor: '#f25648',
+	        color: '#ffffff',
+	        lowerThan: 'transform',
+	        languagePath: '{{baseUrl}}/assets/bower_components/outdated-browser/outdatedbrowser/lang/{{ craft.locale|split('_', 3)[0] }}.html'
+	    })
+	});
+</script>
 </html>

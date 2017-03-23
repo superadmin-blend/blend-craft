@@ -13,7 +13,15 @@ return array(
     'siteUrl' => null,
 
     // Environment-specific variables (see https://craftcms.com/docs/multi-environment-configs#environment-specific-variables)
-    'environmentVariables' => array(),
+    '.dev' => array(
+        'siteUrl' => 'http://blend-craft.dev',
+        'environmentVariables' => array(
+            'baseUrl' => 'http://bend-craft.dev',
+            'assetsBaseUrl' => '/assets/',
+            'assetsBasePath' => './assets/',
+        ),
+        'devMode' => true,
+    ),
 
     // Default Week Start Day (0 = Sunday, 1 = Monday...)
     'defaultWeekStartDay' => 0,

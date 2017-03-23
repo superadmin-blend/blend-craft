@@ -3,3 +3,8 @@ craft/storage/backups/
 craft/storage/runtime/
 craft/storage/userphotos/
 .idea/*
+
+node_modules
+
+public/assets/adminuploads
+public/assets/bower_components

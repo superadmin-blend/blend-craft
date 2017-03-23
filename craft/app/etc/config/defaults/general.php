@@ -390,7 +390,7 @@ return array(
 	 * e.g. http://domain.com/index.php/path
 	 *
 	 * This can only be possible if your server is configured to redirect would-be 404's to index.php, for example, with
-	 * the redirect found in the '.htaccess' file that came with Craft:
+	 * the redirect found in the 'htaccess' file that came with Craft:
 	 *
 	 *     RewriteEngine On
 	 *
@@ -474,7 +474,7 @@ return array(
 	/**
 	 * The amount of time to wait before Craft purges pending users from the system that have not activated. Set to
 	 * false to disable this feature. Note that if you set this to a time interval, then any content assigned to
-     * a pending user will be deleted as well when the given time interval passes.
+	 * a pending user will be deleted as well when the given time interval passes.
 	 *
 	 * @see http://www.php.net/manual/en/dateinterval.construct.php
 	 */
@@ -535,12 +535,6 @@ return array(
 	 * If disabled, an alternate task running trigger *must* be set up separately.
 	 */
 	'runTasksAutomatically' => true,
-
-	/**
-	 * Words that should be ignored when indexing search keywords and preparing search terms to be matched against the
-	 * keyword index.
-	 */
-	'searchIgnoreWords' => array('the', 'and'),
 
 	/**
 	 * Whether the X-Powered-By header should be sent on each request, helping clients identify that the site is powered by Craft.

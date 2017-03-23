@@ -1,0 +1,15 @@
+.redactor-box {
+	display: none;
+}
+.body {
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+form {
+	vertical-align:top;
+	display: inline-block;
+	width: 25%;
+	margin-right: 5%;
+	float: left;
+	margin-bottom: 5em;
+}
