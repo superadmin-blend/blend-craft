@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="4321px" height="119px" viewBox="0 0 4321 119" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>traject</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="20" cy="20" r="20"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40" height="40" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <circle id="path-3" cx="20" cy="20" r="20"></circle>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40" height="40" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <circle id="path-5" cx="20" cy="20" r="20"></circle>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40" height="40" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="traject">
+            <path d="M1440,55.4153175 C1440,55.4153175 1734.03516,6.1931235 1788.58203,13.7985922 C1843.12891,21.404061 2019.54688,94.8024985 2109.50391,99.6267172 C2199.46094,104.450936 2251.91797,65.5212485 2293.03125,65.5212485 C2334.14453,65.5212485 2423.95703,90.185311 2466.30469,90.185311 C2508.65234,90.185311 2596.47656,65.2282797 2596.47656,65.2282797 C2596.47656,65.2282797 2693.58203,17.0643626 2741.99609,35.5564047 C2790.41016,54.0484469 2838.33984,99.6267172 2880,99.6267172" id="Path-2" stroke="#979797" stroke-width="4" stroke-dasharray="10,12"></path>
+            <path d="M0,58.9554953 C113.757812,103.248382 224.109375,7.82869638 278.65625,15.4341651 C333.203125,23.0396339 334.210938,75.1824479 485.054688,46.3013526 C635.898438,17.4202574 657.28125,136.10604 774.25,85.6919776 C891.21875,35.2779151 972.980469,93.8069761 1015.32812,93.8069761 C1057.67578,93.8069761 1145.5,68.8499449 1145.5,68.8499449 C1145.5,68.8499449 1208.48437,27.8093105 1256.89844,46.3013526 C1305.3125,64.7933947 1387.36328,103.248382 1429.02344,103.248382" id="Path-2-Copy" stroke="#979797" stroke-width="4" stroke-dasharray="10,12" transform="translate(714.511719, 59.124191) scale(-1, 1) translate(-714.511719, -59.124191) "></path>
+            <path d="M2891,56.9554953 C3004.75781,101.248382 3115.10938,5.82869638 3169.65625,13.4341651 C3224.20313,21.0396339 3225.21094,73.1824479 3376.05469,44.3013526 C3526.89844,15.4202574 3548.28125,134.10604 3665.25,83.6919776 C3782.21875,33.2779151 3863.98047,91.8069761 3906.32812,91.8069761 C3948.67578,91.8069761 4036.5,66.8499449 4036.5,66.8499449 C4036.5,66.8499449 4099.48438,25.8093105 4147.89844,44.3013526 C4196.3125,62.7933947 4278.36328,101.248382 4320.02344,101.248382" id="Path-2-Copy-2" stroke="#979797" stroke-width="4" stroke-dasharray="10,12" transform="translate(3605.511719, 57.124191) scale(-1, 1) translate(-3605.511719, -57.124191) "></path>
+            <g id="dot-active" transform="translate(1665.000000, 0.000000)">
+                <use id="Oval" stroke="#979797" mask="url(#mask-2)" stroke-width="8" xlink:href="#path-1"></use>
+                <circle id="Oval-Copy" fill="#979797" cx="20" cy="20" r="12"></circle>
+            </g>
+            <g id="dot-copy" transform="translate(2092.000000, 79.000000)">
+                <use id="Oval" stroke="#F0592A" mask="url(#mask-4)" stroke-width="8" xlink:href="#path-3"></use>
+                <circle id="Oval-Copy" fill="#F0592A" cx="20" cy="20" r="12"></circle>
+            </g>
+            <g id="dot-copy-2" transform="translate(2588.000000, 40.000000)">
+                <use id="Oval" stroke="#979797" mask="url(#mask-6)" stroke-width="8" xlink:href="#path-5"></use>
+                <circle id="Oval-Copy" fill="#979797" cx="20" cy="20" r="12"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

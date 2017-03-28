@@ -1,7 +1,4 @@
-var miauw ="miauw";
-var ciao;
-var yu;
-var wow;
+$(document).foundation();
 var wzaa;
 var nono;
 var jaja;

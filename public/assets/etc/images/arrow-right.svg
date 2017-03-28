@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="39px" viewBox="0 0 21 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow right</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Desktop-HD-(home)" transform="translate(-484.000000, -601.000000)" stroke="#FFFFFF" stroke-width="1.157625">
+            <g id="breadcrumbs-menu-alternative-timeline" transform="translate(0.000000, 565.000000)">
+                <g id="arrow-right" transform="translate(485.000000, 37.000000)">
+                    <path d="M0.351851852,0.353643967 L18.7089446,18.8042363" id="Line"></path>
+                    <path d="M0.351851852,18.2568698 L18.7089446,36.7074621" id="Line-Copy-5" transform="translate(9.500000, 27.451613) scale(1, -1) translate(-9.500000, -27.451613) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
