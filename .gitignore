@@ -6,5 +6,7 @@ craft/storage/userphotos/
 
 node_modules
 
+dandelion.yml
+
 public/assets/adminuploads
 public/assets/bower_components
