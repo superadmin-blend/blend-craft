@@ -3,3 +3,10 @@ craft/storage/backups/
 craft/storage/runtime/
 craft/storage/userphotos/
 .idea/*
+
+node_modules
+
+dandelion.yml
+
+public/assets/adminuploads
+public/assets/bower_components

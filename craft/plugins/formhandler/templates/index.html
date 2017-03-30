@@ -1,14 +1,55 @@
 {% extends "_layouts/cp" %}
 {% set subscribers = craft.formhandler.getAllSubscribers() %}
-{% set title = "Form Handler"|t %}
+{% set title = "Newsletter subscribers"|t %}
+{% if craft.request.getParam('q') %}
+	{% set query = craft.request.getParam('q') %}
+	{% set results = craft.formhandler.searchSubscribers(query) %}
+{% endif %}
 
 {% set content %}
-    <p>Hello!</p>
-    {% if subscribers|length %}
-        {% for subscriber in subscribers %}
-            <ul>
-                <li>{{ subscriber.name }} {{ subscriber.email }} <a href="{{ actionUrl('formHandler/subscriber/deleteSubscriber', { id: subscriber.id }) }}"> delete</a></li>
-            </ul>
-        {% endfor %}
-    {% endif %}
+	<form id="search" method="get" action="" accept-charset="UTF-8">
+		<input type="text" class="text" placeholder="{% if query is defined %}{{ query }}{% else %}Search{% endif %}" name="q">
+		<input type="submit" class="btn">
+	</form>
+<div class="body last">
+	<div class="elementindex">
+		<div class="main">
+			<div class="elements">
+				<div class="tableview">
+					<table class="data fullwidth">
+						<thead>
+							<tr>
+								<th scope="col" data-attribute="email" class="orderable">Email</th>
+								<th>Delete Subscriber</th>
+							</tr>
+						</thead>
+							<tbody>
+						{% if craft.request.getParam('q') %}
+							{% if results|length %}
+								{% for subscriber in results %}
+									<tr>
+										<td>{{ subscriber.name }}</td>
+										<td>{{ subscriber.email }}</td>
+									    <td><a href="{{ actionUrl('formHandler/subscriber/deleteSubscriber', { id: subscriber.id }) }}"> delete</a></td>
+									</tr>
+						    	{% endfor %}
+						    {% endif %}
+						{% else %}
+						    {% for subscriber in subscribers %}
+							<tr>
+								<td>{{ subscriber.name }}</td>
+								<td>{{ subscriber.email }}</td>
+							    <td><a href="{{ actionUrl('formHandler/subscriber/deleteSubscriber', { id: subscriber.id }) }}"> delete</a></td>
+							</tr>
+						    {% endfor %}
+						{% endif %}
+						</tbody>
+				    </table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 {% endset %}

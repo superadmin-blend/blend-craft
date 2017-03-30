@@ -1,0 +1,19 @@
+{
+  "name": "front-end-for-craft-project",
+  "version": "1.0.0",
+  "author": "Piotr Mazurek",
+  "description": "Installation of front-end dependencies for this Craft project.",
+  "dependencies": {
+    "foundation-sites": "~6.3.0",
+    "motion-ui": "~1.2.2",
+    "outdated-browser": "~1.1.3"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true
+}

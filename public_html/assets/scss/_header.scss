@@ -1,0 +1,24 @@
+.top-bar {
+	a {
+		color: $black;
+	}
+	img {
+		height: 50px;
+	}
+	.top-bar-title {
+		padding-left: 1em;
+	}
+	.top-bar-left {
+		margin-top: 1em;
+	}
+
+	.top-bar-right {
+		margin-top: 1em;
+	}
+
+	.toggle {
+		padding-top: 1.5em;
+		right: 10px;
+		position: absolute;
+	}
+}

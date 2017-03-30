@@ -1,0 +1,138 @@
+{#
+ # Layout template
+ # ---------------
+ #
+ # This template defines your site’s global layout. It can be
+ # “extended” by other templates to fill in the gaps.
+ #
+ # See Twig’s Template Inheritance documentation for more details:
+ # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
+ #}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+	<link rel="home" href="{{ siteUrl }}" />
+	{% set baseUrl = craft.config.environmentVariables.baseUrl %}
+	<link rel="stylesheet" type="text/css" href="{{baseUrl}}/assets/css/app.min.css">
+	<link rel="stylesheet" type="text/css" href="{{baseUrl}}/assets/bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.css">
+</head>
+
+<body>
+	<div class="top-bar">
+		<div class='top-bar-title'>
+    		<a href="{{ siteUrl }}"><img src="/assets/images/logo-black.svg"></a>
+    	</div>
+    	<div id="responsive-menu">
+    		<div class="top-bar-left">
+				<ul class="menu">
+					<li><a href="{{ url('news') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>News</a></li>
+				</ul>
+			</div>
+			<div class="top-bar-right">
+				<ul class="menu">
+					<li><a href="#">Two</a></li>
+					<li><a href="#">Four</a></li>
+					<li><a href="#">Five</a></li>
+					<li><a href="#">Six</a></li>
+				</ul>
+			</div>
+    	</div>
+    	<span data-responsive-toggle="responsive-menu" data-hide-for="medium" class="toggle top-bar-title">
+        	<button class="menu-icon dark" type="button" data-toggle></button>
+    	</span>
+	</div>
+	<div class="columns large-9 row content">
+		{% block content %}
+			<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+			<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
+		{% endblock %}
+	</div>
+		
+
+	<footer class="footer">
+	    <div class="row">
+		    <div class="small-12 medium-6 medium-push-6 columns">
+		        <p class="logo show-for-small-only"><img src="/assets/images/logo-black.svg"></p> 
+		        <form class="footer-form">
+			        <div class="row">
+			            <div class="medium-9 medium-push-3 columns">
+				            <label>
+				                <label for="email" class="contact">Contact Us</label>
+				                <input type="email" id="email" placeholder="Email Address" />
+				            </label>
+			            </div>
+			        </div>
+			        <div class="row">
+			            <div class="medium-9 medium-push-3 columns">
+				            <label>
+				                <textarea rows="5" id="message" placeholder="Message"></textarea>
+				            </label>
+				        </div>
+			            <div class="row">
+				            <div class="medium-9 medium-push-3 columns">
+				                <button class="submit" type="submit" value="Submit">Send</button>
+				            </div>
+			            </div>
+			        </div>
+		        </form>
+		    </div>
+		    <div class="small-12 medium-6 medium-pull-6 columns">
+		        <p class="logo hide-for-small-only"><i class="fi-target"></i> {{siteName}}</p> 
+		        <p class="footer-links">
+			        <a href="#">Home</a>
+			        <a href="#">Blog</a>
+			        <a href="#">Pricing</a>
+			        <a href="#">About</a>
+			        <a href="#">Faq</a>
+			        <a href="#">Contact</a>
+		        </p>
+		        <ul class="inline-list social">
+			        <a href="#"><i class="fi-social-facebook"></i></a>
+			        <a href="#"><i class="fi-social-twitter"></i></a>
+			        <a href="#"><i class="fi-social-linkedin"></i></a>
+			        <a href="#"><i class="fi-social-github"></i></a>
+		        </ul>
+		        
+		    </div>
+	    </div>
+
+	</footer>
+	<div class="copywrite">Copywrite not copywrite © 2015</div>
+</body>
+<script src="{{baseUrl}}/assets/bower_components/jquery/dist/jquery.js"></script>
+<script src="{{baseUrl}}/assets/bower_components/what-input/dist/what-input.js"></script>
+<script src="{{baseUrl}}/assets/bower_components/foundation-sites/dist/js/foundation.js"></script>
+<script src="{{baseUrl}}/assets/js/app.min.js"></script>
+<script src="{{baseUrl}}/assets/bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.js"></script>
+
+<script>
+	// OUTDATED BROWSER
+
+	//event listener: DOM ready
+	function addLoadEvent(func) {
+	    var oldonload = window.onload;
+	    if (typeof window.onload != 'function') {
+	        window.onload = func;
+	    } else {
+	        window.onload = function() {
+	            if (oldonload) {
+	                oldonload();
+	            }
+	            func();
+	        }
+	    }
+	}
+	//call plugin function after DOM ready
+	addLoadEvent(function(){
+	    outdatedBrowser({
+	        bgColor: '#f25648',
+	        color: '#ffffff',
+	        lowerThan: 'transform',
+	        languagePath: '{{baseUrl}}/assets/bower_components/outdated-browser/outdatedbrowser/lang/{{ craft.locale|split('_', 3)[0] }}.html'
+	    })
+	});
+</script>
+</html>
