@@ -337,10 +337,10 @@ Satisfy any
 
 # Hide .git and _svn folders so they cannot be accessed 
 # But you shouldn't upload them in the first place 
-# <IfModule mod_rewrite.c>
-# 	RewriteRule ^(.*/)*_svn/ / [F,L]
-# 	RewriteRule ^(.*/)*\.git/ / [F,L]
-# </IfModule>
+ <IfModule mod_rewrite.c>
+ 	RewriteRule ^(.*/)*_svn/ / [F,L]
+ 	RewriteRule ^(.*/)*\.git/ / [F,L]
+ </IfModule>
 
 
 # ------------------------------------------------------------
@@ -371,3 +371,5 @@ Satisfy any
 	RewriteCond %{REQUEST_URI} !^/(favicon\.ico|apple-touch-icon.*\.png)$ [NC]
 	RewriteRule (.+) index.php?p=$1 [QSA,L]
 </IfModule>
+
+php_value memory_limit 2048M

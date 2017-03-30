@@ -2541,3 +2541,9 @@ a.thumbnail image { box-shadow: none; }
 .logo i { margin-right: 0.5rem; }
 
 .copywrite { font-size: 0.875rem; padding-top: 10px; text-align: center; background-color: #8a8a8a; height: 40px; }
+
+.image { display: inline-block; width: 100%; background: #FEFEFE; border: 2px solid #FAFAFA; box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4); margin: 0 2px 15px; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; column-break-inside: avoid; padding: 15px; padding-bottom: 5px; background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9); opacity: 1; }
+
+.image img { width: 100%; border-bottom: 1px solid #ccc; padding-bottom: 15px; margin-bottom: 5px; }
+
+.multiImg { -webkit-column-count: 3; -webkit-column-gap: 10px; -webkit-column-fill: auto; -moz-column-count: 3; -moz-column-gap: 10px; -moz-column-fill: auto; column-count: 3; column-gap: 15px; column-fill: auto; }

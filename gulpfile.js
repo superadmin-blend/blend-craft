@@ -2,12 +2,12 @@ var gulp = require('gulp');
 var $    = require('gulp-load-plugins')();
 
 var sassPaths = [
-  'public/assets/bower_components/normalize.scss/sass',
-  'public/assets/bower_components/foundation-sites/scss',
-  'public/assets/bower_components/motion-ui/src'
+  'public_html/assets/bower_components/normalize.scss/sass',
+  'public_html/assets/bower_components/foundation-sites/scss',
+  'public_html/assets/bower_components/motion-ui/src'
 ];
 
-var assetsPath = 'public/assets';
+var assetsPath = 'public_html/assets';
 
 gulp.task('sass', function() {
   return gulp.src(assetsPath + '/scss/app.scss')

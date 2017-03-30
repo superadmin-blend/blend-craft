@@ -9,4 +9,6 @@ node_modules
 dandelion.yml
 
 public/assets/adminuploads
+public/assets/images
+public/assets/optimized_img
 public/assets/bower_components
