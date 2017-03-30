@@ -1,0 +1,6 @@
+{% set sizes = [] %}
+{% for widthSize in widths %}
+	{% set sizes = sizes|merge([{width: widthSize}]) %}
+{% endfor %}
+{% set transformedImage = craft.imager.transformImage(image,  sizes , { jpegQuality: 80 }) %}
+<img src="{{image.url()}}" srcset="{{ craft.imager.srcset(transformedImage) }}" sizes="{% if vw is not defined %}100vw{% else %}{{ vw }}{% endif%}" />

@@ -17,15 +17,32 @@
  # http://craftcms.com/docs/routing
  #}
 
+{% set headerImg = entry.blenderImage.first() %}
+{% set multiImg = entry.multiImage %}
+
 {% extends "_layout" %}
 
 {% block content %}
 
-	<h1>{{ entry.title }}</h1>
+<div class="columns large-9 large-centered">
+    {% include "_includes/_img.html" with { image : headerImg, vw : '100vw', widths : [ '150', '300', '640', '800', '1040', '1400'] } %}
 
-	{{ entry.body }}
+    <div class="multiImg">
+    {% for img in multiImg %}
+        <div class="columns small-12 medium-6 large-4 image" >
+            {% include "_includes/_img.html" with { image : img, vw : '33vw', widths : [ '150', '300', '640', '800', '1040', '1400'] } %}
+        </div>
+    {% endfor %}
+    </div>
 
+    <div class="row columns large-12" style="clear:both;">
+        <h1>{{ entry.title }}</h1>
+    </div>
+    
 
+    {{ entry.body }}
+    
+    
     <form method="post" action="" accept-charset="UTF-8">
         {{ getCsrfInput() }}
         <input type="hidden" name="action" value="formHandler/subscriber/saveSubscriber">
@@ -51,6 +68,9 @@
 
         <input class="btn submit" type="submit" value="{{ 'Submit'|t }}">
     </form>
+</div>
+
+	
 {% endblock %}
 
 
