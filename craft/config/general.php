@@ -33,14 +33,4 @@ return array(
         'devMode' => true,
     ),
 
-    '.blendworks.be' => array(
-        'siteUrl' => 'http://blendcraft.blendworks.be',
-        'environmentVariables' => array(
-            'baseUrl' => 'http://blendcraft.blendworks.be',
-            'assetsBaseUrl' => '/assets/',
-            'assetsBasePath' => './assets/',
-        ),
-        'devMode' => true,
-    ),
-
 );
