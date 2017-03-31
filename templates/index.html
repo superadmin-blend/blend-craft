@@ -24,13 +24,13 @@
 
 {% block content %}
 
-<div class="columns large-9 large-centered">
+<div class="column large-9 large-centered">
     {% include "_includes/_img.html" with { image : headerImg, vw : '100vw', widths : [ '150', '300', '640', '800', '1040', '1400'] } %}
 
     <div class="multiImg">
     {% for img in multiImg %}
-        <div class="columns small-12 medium-6 large-4 image" >
-            {% include "_includes/_img.html" with { image : img, vw : '33vw', widths : [ '150', '300', '640', '800', '1040', '1400'] } %}
+        <div class="image" >
+            {% include "_includes/_img.html" with { image : img, vw : '(min-width: 1024px) 33.3vw, (min-width: 640px) 50vw, 100vw', widths : [ '150', '300', '640', '800', '1040', '1400'] } %}
         </div>
     {% endfor %}
     </div>

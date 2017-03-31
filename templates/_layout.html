@@ -15,13 +15,14 @@
 	<meta charset="utf-8" />
 	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 	<link rel="home" href="{{ siteUrl }}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	{% set baseUrl = craft.config.environmentVariables.baseUrl %}
 	<link rel="stylesheet" type="text/css" href="{{baseUrl}}/assets/css/app.min.css">
 	<link rel="stylesheet" type="text/css" href="{{baseUrl}}/assets/bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.css">
 </head>
 
 <body>
-	<div class="top-bar">
+	<div class="top-bar large-12 columns">
 		<div class='top-bar-title'>
     		<a href="{{ siteUrl }}"><img src="/assets/images/logo-black.svg"></a>
     	</div>
@@ -44,7 +45,7 @@
         	<button class="menu-icon dark" type="button" data-toggle></button>
     	</span>
 	</div>
-	<div class="content">
+	<div class="row large-12 columns content">
 		{% block content %}
 			<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
 			<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
