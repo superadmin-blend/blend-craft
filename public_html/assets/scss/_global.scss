@@ -6,7 +6,7 @@
     column-gap: 1.5em;
     font-size: .85em;
 }
-.image img {
+.image {
 	display: inline-block;
     background: #fff;
     padding: 1em;
@@ -16,6 +16,10 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-shadow: 2px 2px 4px 0 #ccc;
+}
+
+.important-test {
+    color:white;
 }
 
 @media only screen and (max-width: 640px) {
@@ -36,8 +40,8 @@
 
 @media only screen and (min-width: 1024px) {
     .multiImg {
-        -moz-column-count: 4;
-        -webkit-column-count: 4;
-        column-count: 4;
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
     }
 }
