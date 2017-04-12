@@ -38,7 +38,13 @@ gulp.task('sass', function() {
 });
 
 gulp.task('scripts', function() {  
-  return gulp.src(assetsPath + '/src/**/*.js')
+  return gulp.src([
+    assetsPath + '/bower_components/jquery/dist/jquery.js',
+    assetsPath + '/bower_components/foundation-sites/dist/js/foundation.js',
+    assetsPath + '/bower_components/what-input/dist/what-input.js',
+    assetsPath + '/src/**/*.js',
+    assetsPath + '/bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.js'
+    ])
     .pipe($.concat('app.js'))
     .pipe(gulp.dest(assetsPath + '/js'))
     .pipe($.rename('app.min.js'))
@@ -46,6 +52,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest(assetsPath + '/js'))
     .pipe($.livereload());
 });
+
 
 gulp.task('default', ['sass', 'scripts'], function() {
 	$.livereload.listen();
