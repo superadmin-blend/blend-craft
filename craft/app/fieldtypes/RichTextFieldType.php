@@ -430,7 +430,7 @@ class RichTextFieldType extends BaseFieldType
 
 		$assetSourceIds = $this->getSettings()->availableAssetSources;
 
-		if (!$assetSourceIds)
+		if ($assetSourceIds === '*' || !$assetSourceIds)
 		{
 			$assetSourceIds = craft()->assetSources->getPublicSourceIds();
 		}
@@ -440,10 +440,17 @@ class RichTextFieldType extends BaseFieldType
 			'parentId' => ':empty:'
 		));
 
+		// Sort it by source order.
+		$list = array();
+
 		foreach ($folders as $folder)
 		{
-			$sources[] = 'folder:'.$folder->id;
+		    $list[$folder->sourceId] = $folder->id;
 		}
+
+		foreach ($assetSourceIds as $assetSourceId) {
+		    $sources[] = 'folder:'.$list[$assetSourceId];
+        }
 
 		return $sources;
 	}
