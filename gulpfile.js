@@ -4,7 +4,8 @@ var $    = require('gulp-load-plugins')();
 var sassPaths = [
   'public_html/assets/bower_components/normalize.scss/sass',
   'public_html/assets/bower_components/foundation-sites/scss',
-  'public_html/assets/bower_components/motion-ui/src'
+  'public_html/assets/bower_components/motion-ui/src',
+  'public_html/assets/bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.css'
 ];
 
 var assetsPath = 'public_html/assets';
@@ -17,13 +18,14 @@ gulp.task('sass', function() {
       outputStyle: 'compact'
     }))
     .pipe(gulp.dest(assetsPath + '/css'))
-    .pipe($.uncss({
-            html: ['templates/**/*.html'],
-            ignore: [
-              new RegExp('^meta\..*'),
-              new RegExp('^\.important-.*')
-            ]
-        }))
+    // .pipe($.uncss({
+    //         html: ['templates/**/*.html'],
+    //         ignore: [
+    //           new RegExp('^meta\..*'),
+    //           new RegExp('^\.important-.*'),
+    //           new RegExp('^\.is-.*')
+    //         ]
+    //     }))
     .pipe($.rename('app.min.css'))
     .pipe($.sass({
       includePaths: sassPaths,

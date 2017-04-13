@@ -21,5 +21,9 @@
 return array(
   'imagerSystemPath' => $_SERVER['DOCUMENT_ROOT'] . '/assets/optimized_img/',
   'imagerUrl' => '/assets/optimized_img/',
-  
+  'webpQuality' => 80,
+  'webpImagickOptions' => array(
+  	'lossless' => 'false',
+    'method' => '5',
+   ),
 );

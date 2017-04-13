@@ -26,7 +26,7 @@
 
 <div class="column large-9 large-centered">
     {% include "_includes/_img.html" with { image : headerImg, vw : '100vw', widths : [ '150', '300', '640', '800', '1040', '1400'] } %}
-
+    {% cache %}
     <div class="multiImg">
     {% for img in multiImg %}
         <div class="image" >
@@ -34,6 +34,7 @@
         </div>
     {% endfor %}
     </div>
+    {% endcache %}
 
     <div class="row columns large-12" >
         <h1>{{ entry.title }}</h1>
@@ -47,30 +48,6 @@
         {{ getCsrfInput() }}
         <input type="hidden" name="action" value="formHandler/subscriber/saveSubscriber">
         <input type="hidden" name="redirect" value="formHandler/subscriber/">
-        <input type="text" name = "name" placeholder="name">
-        {% if errors.name is defined ? errors.name | length %}
-        <div data-alert class="alert">
-            {% for error in errors.name %}
-                {{ error }}
-            {% endfor %}
-        </div>
-        {% endif %}
-        <input type="email" name ="email" placeholder="email">
-        {% if errors.email is defined ? errors.email | length %}
-        <div data-alert class="alert">
-            {% for error in errors.email %}
-                {{ error }}
-            {% endfor %}
-        </div>
-        {% endif %}
-
-        <!-- ...-->
-
-        <input class="btn submit" type="submit" value="{{ 'Submit'|t }}">
-    </form>
-    <form method="post" action="" accept-charset="UTF-8">
-        {{ getCsrfInput() }}
-        <input type="hidden" name="action" value="/actions/pushNotifications/devices/registerDevice">
         <input type="text" name = "name" placeholder="name">
         {% if errors.name is defined ? errors.name | length %}
         <div data-alert class="alert">
