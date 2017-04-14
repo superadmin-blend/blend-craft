@@ -4,7 +4,8 @@ var $    = require('gulp-load-plugins')();
 var sassPaths = [
   'public_html/assets/bower_components/normalize.scss/sass',
   'public_html/assets/bower_components/foundation-sites/scss',
-  'public_html/assets/bower_components/motion-ui/src'
+  'public_html/assets/bower_components/motion-ui/src',
+  'public_html/assets/bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.css'
 ];
 
 var assetsPath = 'public_html/assets';
@@ -17,13 +18,14 @@ gulp.task('sass', function() {
       outputStyle: 'compact'
     }))
     .pipe(gulp.dest(assetsPath + '/css'))
-    .pipe($.uncss({
-            html: ['templates/**/*.html'],
-            ignore: [
-              new RegExp('^meta\..*'),
-              new RegExp('^\.important-.*')
-            ]
-        }))
+    // .pipe($.uncss({
+    //         html: ['templates/**/*.html'],
+    //         ignore: [
+    //           new RegExp('^meta\..*'),
+    //           new RegExp('^\.important-.*'),
+    //           new RegExp('^\.is-.*')
+    //         ]
+    //     }))
     .pipe($.rename('app.min.css'))
     .pipe($.sass({
       includePaths: sassPaths,
@@ -38,7 +40,13 @@ gulp.task('sass', function() {
 });
 
 gulp.task('scripts', function() {  
-  return gulp.src(assetsPath + '/src/**/*.js')
+  return gulp.src([
+    assetsPath + '/bower_components/jquery/dist/jquery.js',
+    assetsPath + '/bower_components/foundation-sites/dist/js/foundation.js',
+    assetsPath + '/bower_components/what-input/dist/what-input.js',
+    assetsPath + '/src/**/*.js',
+    assetsPath + '/bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.js'
+    ])
     .pipe($.concat('app.js'))
     .pipe(gulp.dest(assetsPath + '/js'))
     .pipe($.rename('app.min.js'))
@@ -46,6 +54,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest(assetsPath + '/js'))
     .pipe($.livereload());
 });
+
 
 gulp.task('default', ['sass', 'scripts'], function() {
 	$.livereload.listen();
