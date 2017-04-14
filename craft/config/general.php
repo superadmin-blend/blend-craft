@@ -40,7 +40,7 @@ return array(
             'assetsBaseUrl' => '/assets/',
             'assetsBasePath' => './assets/',
         ),
-        'devMode' => false,
+        'devMode' => true,
         'phpMaxMemoryLimit' => '512M',
     ),
 
