@@ -18,6 +18,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	{% set baseUrl = craft.config.environmentVariables.baseUrl %}
 	<link rel="stylesheet" type="text/css" href="{{baseUrl}}/assets/css/app.min.css" media="all">
+	<!-- Piwik -->
+	<script type="text/javascript">
+	  var _paq = _paq || [];
+	  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() {
+	    var u="//blendcraft.blendworks.be/piwik/";
+	    _paq.push(['setTrackerUrl', u+'piwik.php']);
+	    _paq.push(['setSiteId', '1']);
+	    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
+	<!-- End Piwik Code -->
 </head>
 
 <body>
@@ -166,46 +181,31 @@
 
     
   </script>
-<script>
-	// OUTDATED BROWSER
+	<script>
+		// OUTDATED BROWSER
 
-	//event listener: DOM ready
-	function addLoadEvent(func) {
-	    var oldonload = window.onload;
-	    if (typeof window.onload != 'function') {
-	        window.onload = func;
-	    } else {
-	        window.onload = function() {
-	            if (oldonload) {
-	                oldonload();
-	            }
-	            func();
-	        }
-	    }
-	}
-	//call plugin function after DOM ready
-	addLoadEvent(function(){
-	    outdatedBrowser({
-	        bgColor: '#f25648',
-	        color: '#ffffff',
-	        lowerThan: 'transform',
-	        languagePath: '{{baseUrl}}/assets/bower_components/outdated-browser/outdatedbrowser/lang/{{ craft.locale|split('_', 3)[0] }}.html'
-	    })
-	});
-</script>
-<!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//blendcraft.blendworks.be/piwik/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Piwik Code -->
+		//event listener: DOM ready
+		function addLoadEvent(func) {
+		    var oldonload = window.onload;
+		    if (typeof window.onload != 'function') {
+		        window.onload = func;
+		    } else {
+		        window.onload = function() {
+		            if (oldonload) {
+		                oldonload();
+		            }
+		            func();
+		        }
+		    }
+		}
+		//call plugin function after DOM ready
+		addLoadEvent(function(){
+		    outdatedBrowser({
+		        bgColor: '#f25648',
+		        color: '#ffffff',
+		        lowerThan: 'transform',
+		        languagePath: '{{baseUrl}}/assets/bower_components/outdated-browser/outdatedbrowser/lang/{{ craft.locale|split('_', 3)[0] }}.html'
+		    })
+		});
+	</script>
 </html>

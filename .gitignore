@@ -12,3 +12,5 @@ public/assets/adminuploads
 public/assets/images
 public/assets/optimized_img
 public/assets/bower_components
+public_html/piwik/plugins/IP2Location/data/IP2LOCATION-LITE-DB11.BIN
+public_html/piwik/plugins/IP2Location/data/IP2LOCATION-LITE-DB11.IPV6.BIN
