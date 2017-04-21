@@ -16,7 +16,7 @@ class SeomaticPlugin extends BasePlugin
 
     public function getDocumentationUrl()
     {
-        return 'https://github.com/khalwat/nystudio107/blob/master/README.md';
+        return 'https://github.com/nystudio107/seomatic/wiki';
     }
 
     public function getReleaseFeedUrl()
@@ -26,7 +26,7 @@ class SeomaticPlugin extends BasePlugin
 
     public function getVersion()
     {
-        return '1.1.45';
+        return '1.1.46';
     }
 
     public function getSchemaVersion()
