@@ -18,14 +18,6 @@ gulp.task('sass', function() {
       outputStyle: 'compact'
     }))
     .pipe(gulp.dest(assetsPath + '/css'))
-    // .pipe($.uncss({
-    //         html: ['templates/**/*.html'],
-    //         ignore: [
-    //           new RegExp('^meta\..*'),
-    //           new RegExp('^\.important-.*'),
-    //           new RegExp('^\.is-.*')
-    //         ]
-    //     }))
     .pipe($.rename('app.min.css'))
     .pipe($.sass({
       includePaths: sassPaths,
