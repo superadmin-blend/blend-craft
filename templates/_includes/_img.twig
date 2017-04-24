@@ -1,3 +1,9 @@
+
+{#
+ # Gebruik van include in templates
+ # {% include "_includes/_img.twig" with { image : headerImg, vw : '100vw', widths : [ '150', '300', '640', '800', '1040', '1400', '2800'] } %}
+ #}
+
 {% set sizes = [] %}
 {% set webPSizes = [] %}
 {% for widthSize in widths %}

@@ -47,9 +47,16 @@ gulp.task('scripts', function() {
     .pipe($.livereload());
 });
 
+gulp.task('optimize', function() {  
+  return gulp.src(assetsPath + '/images/*')
+        .pipe($.imagemin())
+        .pipe(gulp.dest(assetsPath + '/images/optimized/'))
+});
 
-gulp.task('default', ['sass', 'scripts'], function() {
+
+gulp.task('default', ['sass', 'scripts', 'optimize'], function() {
 	$.livereload.listen();
   gulp.watch(assetsPath + '/scss/**/*.scss', ['sass']);
   gulp.watch(assetsPath + '/src/*.js', ['scripts']);
+  gulp.watch(assetsPath + '/images/*', ['optimize']);
 });

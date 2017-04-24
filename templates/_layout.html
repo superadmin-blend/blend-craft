@@ -7,43 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	{% set baseUrl = craft.config.environmentVariables.baseUrl %}
 	<link rel="stylesheet" type="text/css" href="{{baseUrl}}/assets/css/app.min.css" media="all">
-	<!-- OneSignal -->
-	<link rel="manifest" href="{{baseUrl}}/manifest.json">
-  	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
-  	<script>
-	    var OneSignal = window.OneSignal || [];
-	    OneSignal.push(["init", {
-	      appId: "ae62a95a-4d15-4cff-9de3-7ab59cdcce6b",
-	      safari_web_id: 'web.onesignal.auto.37e682f0-44ba-408e-8045-bbc89f9e01bb',
-	      autoRegister: false,
-	      notifyButton: {
-	        enable: true /* Set to false to hide */
-	      }
-	    }]);
-	  </script>
-  	<!-- End OneSignal -->
-	<!-- Piwik -->
-	<script type="text/javascript">
-	  var _paq = _paq || [];
-	  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-	  _paq.push(['trackPageView']);
-	  _paq.push(['enableLinkTracking']);
-	  (function() {
-	    var u="//blendcraft.blendworks.be/piwik/";
-	    _paq.push(['setTrackerUrl', u+'piwik.php']);
-	    _paq.push(['setSiteId', '1']);
-	    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-	    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-
-	  })();
-	</script>
-		<!-- Piwik Image Tracker-->
-		<noscript><img src="https://blendcraft.blendworks.be/piwik/piwik.php?idsite=1&rec=1" style="display:none" alt="" /></noscript>
-	<!-- End Piwik Code -->
 </head>
 
 <body>
-	<div class="top-bar large-12 columns">
+	<div class="top-bar large-12">
 		<div class='top-bar-title'>
     		<a href="{{ siteUrl }}"><img src="/assets/images/logo-black.svg"></a>
     	</div>
@@ -66,7 +33,7 @@
         	<button class="menu-icon dark" type="button" data-toggle></button>
     	</span>
 	</div>
-	<div class="row large-12 columns content">
+	<div class="content">
 		{% block content %}
 			<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
 			<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
