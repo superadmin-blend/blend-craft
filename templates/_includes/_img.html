@@ -12,8 +12,7 @@
 {% endif %}
 <picture>
 	{% if craft.imager.serverSupportsWebp %}
-		<source srcset="{{ craft.imager.srcset(transformedWebPImage) }}" type="image/webp" sizes="{% if vw is not defined %}100vw{% else %}{{ vw }}{% endif%}">
-	{% endif %}	
-	<source srcset="{{ craft.imager.srcset(transformedImage) }}" sizes="{% if vw is not defined %}100vw{% else %}{{ vw }}{% endif%}" />
+		<source src="{{ craft.imager.srcset(transformedWebPImage) }}"  sizes="{% if vw is not defined %}100vw{% else %}{{ vw }}{% endif%}"/>
+	{% endif %}
 	<img src="{{image.url()}}" srcset="{{ craft.imager.srcset(transformedImage) }}" sizes="{% if vw is not defined %}100vw{% else %}{{ vw }}{% endif%}" />
 </picture>

@@ -50,6 +50,7 @@ return array(
         ),
         'devMode' => false,
         'phpMaxMemoryLimit' => '512M',
+        'maxUploadFileSize' => 67108864,
     ),
 
 );

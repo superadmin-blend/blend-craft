@@ -1,3 +1,16 @@
+body {
+    position: relative;
+    display: block;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+.content {
+  display: table-row;
+  height: 100%;
+}
+  
 .multiImg {
 	margin: 1.5em 0;
     padding: 0;
