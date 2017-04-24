@@ -26,7 +26,7 @@
 
 <div class="column large-12 large-centered">
     {% cache %}
-    {% include "_includes/_img.html" with { image : headerImg, vw : '100vw', widths : [ '150', '300', '640', '800', '1040', '1400', '2800'] } %}
+    {% include "_includes/_img.twig" with { image : headerImg, vw : '100vw', widths : [ '150', '300', '640', '800', '1040', '1400', '2800'] } %}
     <div class="multiImg">
     {% for img in multiImg %}
         <div class="image" >
