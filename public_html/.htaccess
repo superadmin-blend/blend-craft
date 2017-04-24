@@ -27,15 +27,15 @@
 # htpasswd -nb username password
 # ----------------------------------------------------------------------
  
-SetEnvIf Host blend-craft.dev passreq
-AuthType Basic
-AuthName "Password Required"
-AuthUserFile /Applications/MAMP/htdocs/.htpasswd
-Require valid-user
-Order allow,deny
-Allow from all
-Deny from env=passreq
-Satisfy any
+#SetEnvIf Host blend-craft.dev passreq
+#AuthType Basic
+#AuthName "Password Required"
+#AuthUserFile /Applications/MAMP/htdocs/.htpasswd
+#Require valid-user
+#Order allow,deny
+#Allow from all
+#Deny from env=passreq
+#Satisfy any
 
 # ----------------------------------------------------------------------
 # Proper MIME type for all files
@@ -355,7 +355,6 @@ Satisfy any
 # ------------------------------------------------------------
 
 # RewriteRule ^old-url/?$ /new-url [R=301,L]
-
 
 # ----------------------------------------------------------------------
 # Default Craft .htaccess

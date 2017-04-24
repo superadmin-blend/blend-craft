@@ -1,0 +1,31 @@
+
+{#
+ # Gebruik van include in templates
+ # {% include "_includes/_img.twig" with { image : headerImg, vw : '100vw', widths : [ '150', '300', '640', '800', '1040', '1400', '2800'] } %}
+ #}
+
+{% set sizes = [] %}
+{% set webPSizes = [] %}
+{% for widthSize in widths %}
+	{% set sizes = sizes|merge([{width: widthSize}]) %}
+{% endfor %}
+{% if image.disableWebp | length is not null %}
+{% else %}
+	{% for widthSize in widths %}
+		{% set webPSizes = webPSizes|merge([{width: widthSize, format: 'webp' }]) %}
+	{% endfor %}
+	{% if craft.imager.serverSupportsWebp %}
+		{% set transformedWebPImage = craft.imager.transformImage(image,  webPSizes) %}
+	{% endif %}
+{% endif %}
+{% set transformedImage = craft.imager.transformImage(image,  sizes , { jpegQuality: 100 }) %}
+
+<picture>
+	{% if image.disableWebp | length is not null %}
+	{% else %}
+		{% if craft.imager.serverSupportsWebp %}
+			<source srcset="{{ craft.imager.srcset(transformedWebPImage) }}"  sizes="{% if vw is not defined %}100vw{% else %}{{ vw }}{% endif%}"/>
+		{% endif %}
+	{% endif %}
+	<img src="{{image.url()}}" srcset="{{ craft.imager.srcset(transformedImage) }}" sizes="{% if vw is not defined %}100vw{% else %}{{ vw }}{% endif%}" />
+</picture>
