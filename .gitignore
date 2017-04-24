@@ -1,4 +1,4 @@
-craft/config/db.php
+
 craft/storage/backups/
 craft/storage/runtime/
 .idea/*
