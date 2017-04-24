@@ -38,7 +38,7 @@
 	  })();
 	</script>
 		<!-- Piwik Image Tracker-->
-		<noscript><p><img src="https://blendcraft.blendworks.be/piwik/piwik.php?idsite=1&rec=1" style="border:0" alt="" /></p></noscript>
+		<noscript><img src="https://blendcraft.blendworks.be/piwik/piwik.php?idsite=1&rec=1" style="display:none" alt="" /></noscript>
 	<!-- End Piwik Code -->
 </head>
 
@@ -72,30 +72,47 @@
 			<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
 		{% endblock %}
 	</div>
-		
-
+        
+    </form>
 	<footer class="footer">
 	    <div class="row">
 		    <div class="small-12 medium-6 medium-push-6 columns">
 		        <p class="logo show-for-small-only"><img src="/assets/images/logo-black.svg"></p> 
-		        <form class="footer-form">
+		        <form class="footer-form" method="post" action="" accept-charset="UTF-8">
+		        	{{ getCsrfInput() }}
+		        	<input type="hidden" name="action" value="formHandler/subscriber/saveSubscriber">
+        			<input type="hidden" name="redirect" value="formHandler/subscriber/">
 			        <div class="row">
 			            <div class="medium-9 medium-push-3 columns">
 				            <label>
-				                <label for="email" class="contact">Contact Us</label>
-				                <input type="email" id="email" placeholder="Email Address" />
+				                <label for="name" class="contact">Subscribe to our newsletter</label>
+						        {% if errors.name is defined ? errors.name | length %}
+						        <div data-alert class="alert">
+						            {% for error in errors.name %}
+						                {{ error }}
+						            {% endfor %}
+						        </div>
+						        {% endif %}
+				                <input type="text" name="name" id="name" placeholder="Name">
 				            </label>
 			            </div>
 			        </div>
 			        <div class="row">
 			            <div class="medium-9 medium-push-3 columns">
 				            <label>
-				                <textarea rows="5" id="message" placeholder="Message"></textarea>
+				            	{% if errors.email is defined ? errors.email | length %}
+						        <div data-alert class="alert">
+						            {% for error in errors.email %}
+						                {{ error }}
+						            {% endfor %}
+						        </div>
+						        {% endif %}
+				                <input type="email" name ="email" placeholder="Email">
 				            </label>
 				        </div>
 			            <div class="row">
 				            <div class="medium-9 medium-push-3 columns">
-				                <button class="submit" type="submit" value="Submit">Send</button>
+				                <input class="btn submit" type="submit" value="{{ 'Submit'|t }}">
 				            </div>
 			            </div>
 			        </div>
@@ -120,9 +137,8 @@
 		        
 		    </div>
 	    </div>
-
 	</footer>
-	<div class="copywrite">Copywrite not copywrite © 2015</div>
+	<div class="copywrite">Blend Craft © 2017</div>
 </body>
 <script src="{{baseUrl}}/assets/js/app.min.js"></script>
   

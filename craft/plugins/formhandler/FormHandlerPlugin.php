@@ -6,7 +6,7 @@ class FormHandlerPlugin extends BasePlugin
 {
     function getName()
     {
-        return Craft::t('Form Handler');
+        return Craft::t('Newsletter subscriber');
     }
 
     function getVersion()

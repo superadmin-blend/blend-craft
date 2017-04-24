@@ -67,7 +67,7 @@
     }
   }
   
-  @media only screen and (min-width: 40.063em) {
+  @media (min-width: 1024px) {
     
     p {
       text-align: left;
@@ -81,7 +81,7 @@
     .footer-form {
       .contact {
         position: absolute;
-        left: -45%;
+        left: -55%;
         top: 10%;
       }
     }
