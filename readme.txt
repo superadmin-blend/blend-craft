@@ -1,4 +1,3 @@
-Something extra
 Welcome to Craft CMS!
 
 Here are some online resources you might find useful:
