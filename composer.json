@@ -3,7 +3,7 @@
     "description": "Basic Craft-project for Blend",
     "homepage": "https://github.com/superadmin-blend/blend-craft",
     "license": "MIT",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "php": "^5.3.3 || ^7.0"
     },
