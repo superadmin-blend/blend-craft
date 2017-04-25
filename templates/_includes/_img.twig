@@ -1,7 +1,7 @@
 
 {#
  # Gebruik van include in templates
- # {% include "_includes/_img.twig" with { image : headerImg, vw : '100vw', widths : [ '150', '300', '640', '800', '1040', '1400', '2800'] } %}
+ # {% include "_includes/_img.twig" with { image : imageName, vw : '100vw', widths : [ '150', '300', '640', '800', '1040', '1400', '2800'] } %}
  #}
 
 {% set sizes = [] %}
@@ -9,6 +9,11 @@
 {% for widthSize in widths %}
 	{% set sizes = sizes|merge([{width: widthSize}]) %}
 {% endfor %}
+
+{#
+ # Als je geen webp formaat wilt gebruiken => picture element verwijderen en enkel de <img> gebruiken 
+ #}
+ 
 {% if image.disableWebp | length is not null %}
 {% else %}
 	{% for widthSize in widths %}
