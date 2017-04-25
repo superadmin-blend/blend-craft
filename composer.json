@@ -1,0 +1,7 @@
+{
+    "name": "blend/blend-craft",
+    "description": "Basic Craft-project for Blend",
+    "require": {
+        "php": "^5.3.3 || ^7.0"
+    }
+}
