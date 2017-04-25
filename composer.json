@@ -5,7 +5,7 @@
     "license": "MIT",
     "minimum-stability": "dev",
     "require": {
-        "php": "^5.6.x"
+        "php": ">=5.3.0"
     },
     "version": "1.0.0"
 }
