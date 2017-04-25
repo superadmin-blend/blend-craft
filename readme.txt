@@ -1,23 +1,8 @@
 This is a basic Blend Craft project!
 
-Welcome to Craft CMS!
+1. Download package
 
-Here are some online resources you might find useful:
+2. Run npm install in the folder
 
+3. Setup database
 
-Documentation
------------------------------------------------------------------
-Installation instructions and much more.
-https://craftcms.com/docs
-
-
-Changelog
------------------------------------------------------------------
-Release notes with bug fixes, improvements and additions.
-https://craftcms.com/changelog
-
-
-Stack Exchange
------------------------------------------------------------------
-A great place to ask your Craft questions, meet the awesome Craft community and earn mad reputation.
-https://craftcms.stackexchange.com/
