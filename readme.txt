@@ -1,3 +1,5 @@
+This is a basic Blend Craft project!
+
 Welcome to Craft CMS!
 
 Here are some online resources you might find useful:
