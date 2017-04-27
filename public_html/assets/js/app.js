@@ -20358,9 +20358,6 @@ return /******/ (function(modules) { // webpackBootstrap
 });
 ;
 $(document).foundation();
-var wzaa;
-var nono;
-var jaja;
 /*!--------------------------------------------------------------------
 JAVASCRIPT "Outdated Browser"
 Version:    1.1.2 - 2015
