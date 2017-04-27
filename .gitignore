@@ -4,8 +4,6 @@ craft/storage/runtime/
 
 node_modules
 
-dandelion.yml
-
 public_html/assets/uploads/*
 public_html/assets/images/*
 public_html/assets/optimized_img/*

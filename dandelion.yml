@@ -1,0 +1,14 @@
+
+# Dont't forget to set dandelion.yml in your .gitignore file!!
+
+adapter: 
+passive: 
+host: 
+username: 
+password: 
+path: 
+
+exclude:
+  - .gitignore
+  - dandelion.yml
+
